@@ -624,7 +624,7 @@ class MineRLEnv(gym.Env):
             self.client_socket.close()
             self.client_socket = None
 
-        if self.instance and self.instance.running:
+        if self.instance:# and self.instance.running:
             self.instance.kill()
 
         self._already_closed = True
